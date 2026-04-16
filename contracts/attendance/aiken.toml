@@ -1,0 +1,12 @@
+name = "blockchain-centre-hub/attendance"
+version = "0.0.0"
+compiler = "v1.1.21"
+plutus = "v3"
+description = ""
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "1.9.0"
+source = "github"
+
+[config]

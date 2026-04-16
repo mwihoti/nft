@@ -1,0 +1,434 @@
+/* ============================================================
+   Blockchain Centre Hub — Attendance NFT Plugin Styles
+   ============================================================ */
+
+/* ── Shared ── */
+.bch-wrap h1 { display: flex; align-items: center; gap: .5rem; }
+.bch-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.bch-card--success { border-color: #00a32a; background: #f0fdf4; }
+.bch-card--info    { border-color: #bfdbfe; background: #eff6ff; }
+.bch-addr-long { word-break: break-all; font-size: .85rem; }
+
+.bch-status-msg { margin-top: .5rem; font-weight: 500; min-height: 1.4em; }
+.bch-minted { color: #00a32a; font-weight: 600; }
+
+/* Status badges */
+.bch-status {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    font-size: .8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.bch-status--pending     { background: #fef3c7; color: #92400e; }
+.bch-status--claim_ready { background: #dbeafe; color: #1e40af; }
+.bch-status--minted      { background: #dcfce7; color: #166534; }
+
+/* Wallet grid */
+.bch-wallet-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin: 1rem 0;
+}
+.bch-wallet-btn, button.bch-wallet-btn {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .6rem 1.2rem;
+    border: 2px solid #6366f1;
+    border-radius: 8px;
+    background: #fff;
+    color: #4338ca;
+    font-weight: 600;
+    font-size: .95rem;
+    cursor: pointer;
+    transition: background .15s, color .15s;
+}
+.bch-wallet-btn:hover { background: #6366f1; color: #fff; }
+.bch-wallet-btn img { width: 24px; height: 24px; object-fit: contain; }
+
+/* Truncated wallet address */
+.bch-addr {
+    font-family: monospace;
+    font-size: .8rem;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ── Admin Issue NFT page ── */
+#bch-mint-panel h2 { margin-top: 1.5rem; }
+#bch-mint-btn { margin-top: .5rem; }
+
+/* ── Public Claim Page ── */
+.bch-claim-page {
+    max-width: 680px;
+    margin: 2rem auto;
+    font-family: system-ui, sans-serif;
+}
+.bch-claim-header { text-align: center; margin-bottom: 2rem; }
+.bch-claim-header h1 { font-size: 2rem; color: #1e1b4b; }
+.bch-claim-subtitle { color: #6b7280; font-size: 1.1rem; margin-top: .25rem; }
+
+.bch-claim-card { padding: 2rem; }
+
+.bch-attendee-info h2 { margin-top: 0; color: #312e81; }
+
+.bch-event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin: 1rem 0 1.5rem;
+    color: #374151;
+    font-size: .95rem;
+}
+.bch-event-meta span {
+    background: #f3f4f6;
+    border-radius: 6px;
+    padding: .35rem .75rem;
+}
+
+.bch-step { margin-top: 1.5rem; }
+.bch-step h3 { border-bottom: 1px solid #e5e7eb; padding-bottom: .5rem; }
+.bch-step--success { text-align: center; }
+.bch-step--success h3 { color: #166534; border-color: #86efac; }
+
+.bch-btn-primary {
+    display: inline-block;
+    padding: .75rem 2rem;
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .15s;
+}
+.bch-btn-primary:hover { background: #4f46e5; }
+.bch-btn-primary:disabled { background: #a5b4fc; cursor: not-allowed; }
+
+.bch-alert {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+.bch-alert--error   { background: #fef2f2; border: 1px solid #fca5a5; color: #991b1b; }
+.bch-alert--success { background: #f0fdf4; border: 1px solid #86efac; color: #166534; }
+
+.bch-description { color: #6b7280; font-size: .95rem; }
+.bch-note        { color: #9ca3af; font-size: .875rem; }
+
+code { background: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-size: .85em; }
+
+/* ── Public Check-in Page ── */
+.bch-checkin-page { max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif; padding: 0 1rem; }
+
+.bch-event-hero { border-radius: 12px; overflow: hidden; background: #1e1b4b; color: #fff; margin-bottom: 2rem; }
+.bch-event-banner { width: 100%; max-height: 220px; object-fit: cover; display: block; }
+.bch-event-hero-content { padding: 1.5rem 2rem; }
+.bch-event-hero-content h1 { margin: 0 0 .75rem; font-size: 1.75rem; color: #fff; }
+.bch-event-desc { color: #c7d2fe; margin: .75rem 0 0; }
+
+.bch-nft-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+}
+.bch-nft-badge { font-size: 2.5rem; line-height: 1; }
+.bch-nft-info h3 { margin: 0 0 .35rem; color: #312e81; }
+.bch-nft-info p  { margin: 0; color: #4338ca; font-size: .95rem; }
+
+.bch-checkin-card { padding: 2rem; }
+.bch-checkin-card h2 { margin-top: 0; color: #1e1b4b; }
+
+.bch-form-group { margin-bottom: 1.25rem; }
+.bch-form-group label { display: block; font-weight: 600; margin-bottom: .4rem; color: #374151; }
+.bch-required { color: #ef4444; }
+.bch-input {
+    width: 100%;
+    padding: .65rem .9rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color .15s;
+    box-sizing: border-box;
+}
+.bch-input:focus { outline: none; border-color: #6366f1; }
+.bch-input--mono { font-family: monospace; font-size: .9rem; }
+.bch-field-hint { font-size: .85rem; color: #6b7280; margin: .4rem 0 0; }
+
+.bch-btn-full { width: 100%; text-align: center; padding: .85rem; font-size: 1.05rem; }
+
+/* Success panel */
+.bch-success-panel { text-align: center; padding: 1rem 0; }
+.bch-success-icon {
+    width: 72px; height: 72px; line-height: 72px;
+    background: #22c55e; color: #fff;
+    border-radius: 50%; font-size: 2rem;
+    margin: 0 auto 1.25rem;
+}
+.bch-success-panel h2 { color: #166534; margin-bottom: .5rem; }
+.bch-success-panel p  { color: #374151; margin-bottom: 1.5rem; }
+
+.bch-success-steps { text-align: left; max-width: 420px; margin: 0 auto; }
+.bch-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    padding: .6rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: .95rem;
+    color: #374151;
+}
+.bch-step-item:last-child { border-bottom: none; }
+.bch-step-num {
+    min-width: 28px; height: 28px; line-height: 28px;
+    background: #6366f1; color: #fff;
+    border-radius: 50%; text-align: center;
+    font-weight: 700; font-size: .85rem;
+}
+
+/* Wallet connect section on check-in page */
+.bch-wallet-label { font-size: .9rem; color: #6b7280; margin: 0 0 .75rem; }
+.bch-wallet-grid--checkin { flex-wrap: wrap; }
+
+.bch-wallet-connected-box {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+    border-radius: 8px;
+    padding: .75rem 1rem;
+    margin-top: .5rem;
+}
+.bch-connected-icon {
+    width: 32px; height: 32px; line-height: 32px;
+    background: #22c55e; color: #fff;
+    border-radius: 50%; text-align: center;
+    font-weight: 700; flex-shrink: 0;
+}
+.bch-connected-addr {
+    font-family: monospace;
+    font-size: .8rem;
+    color: #6b7280;
+    margin-top: 2px;
+    word-break: break-all;
+}
+
+.bch-manual-toggle { margin-top: .75rem; }
+.bch-btn-link {
+    background: none; border: none; padding: 0;
+    color: #6366f1; font-size: .875rem;
+    cursor: pointer; text-decoration: underline;
+}
+.bch-btn-link:hover { color: #4338ca; }
+
+.bch-submit-hint { font-size: .85rem; color: #9ca3af; text-align: center; margin: .5rem 0 0; }
+
+/* ── Admin panel on public event page ── */
+.bch-admin-panel {
+    background: #1e1b4b;
+    border-radius: 12px;
+    padding: 0;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,.18);
+}
+.bch-admin-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #312e81;
+    padding: .65rem 1.25rem;
+    font-size: .8rem;
+    font-weight: 700;
+    color: #c7d2fe;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+}
+.bch-admin-panel-link {
+    color: #a5b4fc;
+    text-decoration: none;
+    font-size: .8rem;
+}
+.bch-admin-panel-link:hover { color: #fff; text-decoration: underline; }
+
+.bch-admin-stats {
+    display: flex;
+    gap: 1px;
+    background: #312e81;
+}
+.bch-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .75rem .5rem;
+    background: #1e1b4b;
+}
+.bch-stat-num   { font-size: 1.6rem; font-weight: 800; color: #e0e7ff; line-height: 1; }
+.bch-stat-label { font-size: .7rem; color: #818cf8; text-transform: uppercase; letter-spacing: .05em; margin-top: 2px; }
+
+.bch-admin-table-wrap { overflow-x: auto; padding: 0 1rem 1rem; }
+.bch-admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .875rem;
+    color: #e0e7ff;
+}
+.bch-admin-table th {
+    text-align: left;
+    padding: .6rem .75rem;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: #818cf8;
+    border-bottom: 1px solid #312e81;
+}
+.bch-admin-table td {
+    padding: .6rem .75rem;
+    border-bottom: 1px solid #2d2a6e;
+    vertical-align: middle;
+}
+.bch-admin-table tr:last-child td { border-bottom: none; }
+.bch-addr--short { font-family: monospace; font-size: .8rem; color: #a5b4fc; }
+
+.bch-admin-actions { white-space: nowrap; }
+.bch-action-btn {
+    display: inline-block;
+    padding: .25rem .7rem;
+    border-radius: 6px;
+    font-size: .78rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    background: #4f46e5;
+    color: #fff;
+    margin-right: .25rem;
+}
+.bch-action-btn:hover { background: #4338ca; color: #fff; }
+.bch-btn-issue   { background: #0ea5e9; }
+.bch-btn-issue:hover   { background: #0284c7; }
+.bch-btn-tx      { background: #059669; }
+.bch-btn-tx:hover      { background: #047857; }
+
+/* ── Frontend Event Admin Dashboard (bch_event_admin shortcode) ── */
+.bch-ea-wrap { max-width: 1100px; margin: 0 auto; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+
+.bch-ea-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    padding: 1.5rem 0 1rem; border-bottom: 2px solid #e5e7eb; margin-bottom: 1.25rem;
+}
+.bch-ea-badge {
+    display: inline-block; background: #4f46e5; color: #fff;
+    font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+    text-transform: uppercase; padding: .2rem .6rem; border-radius: 4px; margin-bottom: .4rem;
+}
+.bch-ea-title  { margin: 0; font-size: 1.6rem; color: #111827; }
+.bch-ea-subtitle { margin-top: .3rem; color: #6b7280; font-size: .9rem; }
+
+.bch-ea-stats {
+    display: flex; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap;
+}
+.bch-ea-stat {
+    flex: 1; min-width: 100px; background: #fff; border: 1px solid #e5e7eb;
+    border-radius: 10px; padding: 1rem; text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+.bch-ea-stat-num   { display: block; font-size: 2rem; font-weight: 800; color: #111827; line-height: 1; }
+.bch-ea-stat-label { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: #9ca3af; margin-top: .3rem; }
+.bch-ea-stat--pending { color: #d97706; }
+.bch-ea-stat--claim   { color: #2563eb; }
+.bch-ea-stat--minted  { color: #059669; }
+
+.bch-ea-toolbar {
+    display: flex; gap: .75rem; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;
+}
+.bch-ea-search {
+    flex: 1; min-width: 200px; padding: .5rem .85rem;
+    border: 1px solid #d1d5db; border-radius: 8px; font-size: .9rem;
+}
+.bch-ea-select {
+    padding: .5rem .75rem; border: 1px solid #d1d5db; border-radius: 8px; font-size: .9rem;
+    background: #fff;
+}
+
+.bch-ea-table-wrap { overflow-x: auto; border: 1px solid #e5e7eb; border-radius: 10px; margin-bottom: 1.25rem; }
+.bch-ea-table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+.bch-ea-table thead { background: #f9fafb; }
+.bch-ea-table th {
+    padding: .65rem 1rem; text-align: left; font-size: .72rem;
+    text-transform: uppercase; letter-spacing: .06em; color: #6b7280;
+    border-bottom: 1px solid #e5e7eb; white-space: nowrap;
+}
+.bch-ea-table td {
+    padding: .65rem 1rem; border-bottom: 1px solid #f3f4f6; vertical-align: middle;
+}
+.bch-ea-table tr:last-child td { border-bottom: none; }
+.bch-ea-table tr:hover td { background: #fafafa; }
+
+.bch-ea-num    { color: #9ca3af; font-size: .8rem; width: 32px; }
+.bch-ea-name   { font-weight: 600; }
+.bch-ea-wallet { font-family: monospace; font-size: .8rem; }
+.bch-ea-addr   { color: #4f46e5; }
+.bch-ea-none   { color: #d1d5db; font-style: italic; }
+.bch-ea-time   { font-size: .8rem; color: #6b7280; white-space: nowrap; }
+.bch-ea-tx-link { color: #059669; font-size: .82rem; text-decoration: none; }
+.bch-ea-tx-link:hover { text-decoration: underline; }
+.bch-ea-minted { color: #059669; font-weight: 600; font-size: .85rem; }
+.bch-ea-actions { white-space: nowrap; }
+
+.bch-ea-copy {
+    background: none; border: 1px solid #e5e7eb; border-radius: 4px;
+    padding: 1px 6px; font-size: .75rem; cursor: pointer; color: #6b7280;
+    margin-left: .25rem;
+}
+.bch-ea-copy:hover { background: #f3f4f6; }
+.bch-ea-copy--btn { padding: .2rem .6rem; }
+
+.bch-ea-btn {
+    display: inline-block; padding: .35rem .85rem; border-radius: 7px;
+    font-size: .82rem; font-weight: 600; border: none; cursor: pointer;
+    text-decoration: none; line-height: 1.4;
+}
+.bch-ea-btn--primary { background: #4f46e5; color: #fff; }
+.bch-ea-btn--primary:hover { background: #4338ca; color: #fff; }
+.bch-ea-btn--ghost { background: #f3f4f6; color: #374151; border: 1px solid #d1d5db; }
+.bch-ea-btn--ghost:hover { background: #e5e7eb; color: #111; }
+.bch-ea-btn--mint { background: #0ea5e9; color: #fff; }
+.bch-ea-btn--mint:hover { background: #0284c7; }
+
+.bch-ea-empty { text-align: center; color: #9ca3af; padding: 2rem; }
+
+.bch-ea-add-section { margin-top: 1.5rem; }
+.bch-ea-add-form {
+    margin-top: .75rem; background: #f9fafb; border: 1px solid #e5e7eb;
+    border-radius: 10px; padding: 1.25rem;
+}
+.bch-ea-add-form h3 { margin-top: 0; }
+.bch-ea-form-row {
+    display: flex; gap: .75rem; flex-wrap: wrap; align-items: center;
+}
+.bch-ea-form-row .bch-input { flex: 1; min-width: 160px; }
+
+/* Standalone event-admin page body */
+.bch-ea-body { background: #f3f4f6; margin: 0; padding: 0; }
+.bch-ea-page-wrap { max-width: 1140px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }

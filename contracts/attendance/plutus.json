@@ -1,0 +1,109 @@
+{
+  "preamble": {
+    "title": "blockchain-centre-hub/attendance",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.21+unknown"
+    }
+  },
+  "validators": [
+    {
+      "title": "attendance.attendance_metadata.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/attendance~1Cip68Datum"
+        }
+      },
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "compiledCode": "58c001010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea800626466446600400400244b30010018a508acc004cdc79bae300f0010038a518998010011808000a01640386eb0c034c038c038c038c038c038c038c038c038c02cdd518068041bae300c300d300d300a3754601860146ea80062c8040c028004c028c02c004c01cdd5000c59005180380098039804000980380098019baa0078a4d1365640041",
+      "hash": "a623659565fccf04588d4d34970de4fc8c03cfed1a8f1393d66d3a70"
+    },
+    {
+      "title": "attendance.attendance_metadata.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "compiledCode": "58c001010029800aba2aba1aab9faab9eaab9dab9a48888896600264646644b30013370e900118031baa00189919912cc004cdc3a400060126ea800626466446600400400244b30010018a508acc004cdc79bae300f0010038a518998010011808000a01640386eb0c034c038c038c038c038c038c038c038c038c02cdd518068041bae300c300d300d300a3754601860146ea80062c8040c028004c028c02c004c01cdd5000c59005180380098039804000980380098019baa0078a4d1365640041",
+      "hash": "a623659565fccf04588d4d34970de4fc8c03cfed1a8f1393d66d3a70"
+    },
+    {
+      "title": "attendance.attendance_policy.mint",
+      "redeemer": {
+        "title": "_redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "parameters": [
+        {
+          "title": "admin_pkh",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        }
+      ],
+      "compiledCode": "5897010100229800aba2aba1aab9faab9eaab9dab9a9bae002488888896600264646644b30013370e900018039baa00189991198008009bac300c300d300d300d300d300d300d300d300d300a3754601800c6eb8c028c020dd5000912cc00400629422b30013371e6eb8c03000401e2946266004004601a002804100b459006180400098041804800980400098021baa0088a4d13656400801",
+      "hash": "e066c6bda9520276cebc618decd6df908358a0bd9e33de43f71e9cc6"
+    },
+    {
+      "title": "attendance.attendance_policy.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "parameters": [
+        {
+          "title": "admin_pkh",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        }
+      ],
+      "compiledCode": "5897010100229800aba2aba1aab9faab9eaab9dab9a9bae002488888896600264646644b30013370e900018039baa00189991198008009bac300c300d300d300d300d300d300d300d300d300a3754601800c6eb8c028c020dd5000912cc00400629422b30013371e6eb8c03000401e2946266004004601a002804100b459006180400098041804800980400098021baa0088a4d13656400801",
+      "hash": "e066c6bda9520276cebc618decd6df908358a0bd9e33de43f71e9cc6"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Data": {
+      "title": "Data",
+      "description": "Any Plutus data."
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "attendance/Cip68Datum": {
+      "title": "Cip68Datum",
+      "anyOf": [
+        {
+          "title": "Cip68Datum",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "metadata",
+              "$ref": "#/definitions/Data"
+            },
+            {
+              "title": "version",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "extra",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
